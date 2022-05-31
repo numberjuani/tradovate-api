@@ -1,0 +1,26 @@
+[package]
+name = "tradovate-api"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[profile.release]
+opt-level = 3
+lto = true
+
+[dependencies]
+tokio = {version ="*", features = ["macros","sync","time","rt-multi-thread"]}
+reqwest = {version = "*", features = ["json"]}
+serde_json = "*"
+serde = {version = "*", features = ["derive"]}
+chrono = "*"
+tokio-tungstenite = {version = "*", features = ["native-tls"]}
+futures-util = "*"
+url = "*"
+tokio-stream = {version = "*", features = ["signal"]}
+machine-uid = "*"
+itertools = "*"
+chrono-tz = "*"
+rayon = "*"
+urlencoding = "*"
+lettre = { version = "0.10.0-rc.4" ,features = ["tokio1","tokio1-native-tls"]}
